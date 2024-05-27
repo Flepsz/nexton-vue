@@ -1,5 +1,7 @@
 <script setup lang="ts">
-import { ChevronRight } from "lucide-vue-next";
+import { Loader2 } from "lucide-vue-next";
+import type { HTMLAttributes } from "vue";
+import { cn } from "~~/lib/utils/";
 
 const props = defineProps<{
 	class?: HTMLAttributes["class"];
@@ -7,5 +9,5 @@ const props = defineProps<{
 </script>
 
 <template>
-	<ChevronRight :class="cn('size-4', props.class)" />
+	<Loader2 :class="cn('size-4 mr-2 animate-spin', props.class)" />
 </template>
